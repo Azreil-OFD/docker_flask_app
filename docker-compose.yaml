@@ -1,6 +1,11 @@
 version: '3'
 services:
-  flask:
+  frontend:
+    build: ./frontend
+    container_name: front-web
+    ports:
+      - "8080:80"
+  backend:
     # Путь до Dockerfile
     build: ./backend
     # Имя для создаваемого контейнера
