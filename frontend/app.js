@@ -2,7 +2,7 @@ let elem = document.querySelector('.row');
 
 
 $.ajax({
-    url: 'https://avocado-dev.site/article/favorite',
+    url: 'http://localhost:5000/article/favorite',
     method: 'GET',
     success: function(response){
       response.forEach(element => {
@@ -11,7 +11,6 @@ $.ajax({
         block += '\
         <div class="col">\
         <div class="card" style="width: 18rem;">\
-        <img src="..." class="card-img-top" alt="...">\
         <div class="card-body">\
           <h5 class="card-title">'+element['title']+'</h5>\
           <p class="card-text">'+element['body']+'</p>\
